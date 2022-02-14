@@ -1,9 +1,19 @@
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import AllMeetUps from "./pages/AllMeetUps";
+import FavouriteMeetUps from "./pages/FavouriteMeetUps";
+import NewMeetUps from "./pages/NewMeetUps";
 
 function App() {
   return (
     <div className="App">
-      
+      <Routes>
+        <Route path="/" element={<AllMeetUps />}></Route>
+
+        <Route path="/new-meetup" element={<NewMeetUps />}></Route>
+
+        <Route path="/favourite" element={<FavouriteMeetUps />}></Route>
+      </Routes>
     </div>
   );
 }
