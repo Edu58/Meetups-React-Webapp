@@ -24,4 +24,11 @@
     color: #FFFF;
     margin: 0 0 0 2rem;
     cursor: pointer;
+    padding: .2rem 1rem;
+    transition: .2s all;
+}
+
+.navlink:hover {
+    background-color: rgb(51, 192, 148);
+    border-radius: 2px;
 }
