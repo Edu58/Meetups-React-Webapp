@@ -1,0 +1,9 @@
+.meetup_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}

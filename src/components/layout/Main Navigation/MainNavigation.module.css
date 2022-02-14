@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(54, 151, 67);
+    color: #FFFF;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navlink {
+    color: #FFFF;
+    margin: 0 0 0 2rem;
+    cursor: pointer;
+}
