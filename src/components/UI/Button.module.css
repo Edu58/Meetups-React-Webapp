@@ -1,0 +1,17 @@
+.Btn button {
+    width: 50%;
+    padding: .8rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFF;
+    background-color: rgb(14, 114, 82);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .2s all;
+    margin-top: 1rem;
+}
+
+.Btn button:hover {
+    background-color: rgb(51, 192, 148);
+}

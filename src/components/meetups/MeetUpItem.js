@@ -1,3 +1,4 @@
+import Button from "../UI/Button";
 import Card from "../UI/Card";
 import classes from "./MeetUpItem.module.css";
 
@@ -11,9 +12,7 @@ function MeetUpItem(props) {
           <img src={props.image} alt={props.title}></img>
           <p className={classes.description}>{props.description}</p>
 
-          <div>
-            <button className={classes.favouriteBtn}>Add to Favourites</button>
-          </div>
+          <Button>Add To Favourites</Button>
         </li>
       </Card>
     </div>
