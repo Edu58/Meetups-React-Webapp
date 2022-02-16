@@ -1,9 +1,12 @@
 import { useRef } from "react/cjs/react.development";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/UI/Button";
 import Card from "../components/UI/Card";
 import classes from "./NewMeetUps.module.css";
 
 function NewMeetUps() {
+  const navigate = useNavigate();
+
   const meetUpNameInputref = useRef();
   const addressInputref = useRef();
   const imageUrlInputref = useRef();
@@ -21,8 +24,16 @@ function NewMeetUps() {
       title: meetUpName,
       address: addressName,
       image: imageUrl,
-      description: descriptionInput
-    }
+      description: descriptionInput,
+    };
+
+    fetch("https://meetups-webapp-default-rtdb.firebaseio.com/meetups.json", {
+      method: "POST",
+      body: JSON.stringify(newmeetUpData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(navigate("/"));
   }
 
   return (
