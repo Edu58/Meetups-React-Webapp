@@ -14,7 +14,7 @@
     max-width: 25rem;
     height: auto;
     border-radius: 5px;
-    height: auto;
+    max-height: 25rem;
 }
 
 .description {

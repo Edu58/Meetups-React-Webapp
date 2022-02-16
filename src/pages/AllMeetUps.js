@@ -1,39 +1,42 @@
 import MeetUpList from "../components/meetups/MeetUpList";
-
-
-const DATA = [
-  {
-    id: 1,
-    title: "MeetUp 1",
-    address: "Ngumba Estate, Ruaraka, Nairobi Kenya",
-    image:
-      "https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg",
-    description: "Under a tree",
-  },
-  {
-    id: 2,
-    title: "In The Snow",
-    address: "Ngumba Estate, Ruaraka, Nairobi Kenya",
-    image:
-      "https://static9.depositphotos.com/1001436/1145/i/600/depositphotos_11453671-stock-photo-rocky-forest-lake.jpg",
-    description: "Under a tree",
-  },
-
-  {
-    id: 3,
-    title: "On the Road",
-    address: "Ngumba Estate, Ruaraka, Nairobi Kenya",
-    image:
-      "https://images.pexels.com/photos/1563355/pexels-photo-1563355.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    description: "Under a tree",
-  },
-];
-
+import { useState, useEffect } from 'react'
 
 function AllMeetUps() {
-  return (
-    <MeetUpList meetups={ DATA }/>
-  );
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedData, setLoadedData] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://meetups-webapp-default-rtdb.firebaseio.com/meetups.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data)
+        const allMeetUps = []
+
+        for (const key in data) {
+          const singleMeetup = {
+            id: key,
+            ...data[key],
+          };
+
+          allMeetUps.push(singleMeetup);
+        };
+
+        setIsLoading(false);
+        setLoadedData(allMeetUps);
+      });
+  }, []);
+
+  if (isLoading) {
+    <section>
+        <h1>Loading ...</h1>
+      </section>
+  }
+  
+
+  return <MeetUpList meetups={loadedData} />;
 }
 
 export default AllMeetUps;
