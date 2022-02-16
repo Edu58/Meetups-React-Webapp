@@ -11,7 +11,8 @@
 }
 
 .meetupItem img {
-    width: 90%;
+    max-width: 25rem;
+    height: auto;
     border-radius: 5px;
     height: auto;
 }

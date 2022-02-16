@@ -15,7 +15,7 @@ const DATA = [
     title: "In The Snow",
     address: "Ngumba Estate, Ruaraka, Nairobi Kenya",
     image:
-      "https://images.pexels.com/photos/589840/pexels-photo-589840.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://static9.depositphotos.com/1001436/1145/i/600/depositphotos_11453671-stock-photo-rocky-forest-lake.jpg",
     description: "Under a tree",
   },
 
