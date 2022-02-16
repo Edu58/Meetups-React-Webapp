@@ -12,7 +12,6 @@ function AllMeetUps() {
         return response.json();
       })
       .then((data) => {
-        console.log(data)
         const allMeetUps = []
 
         for (const key in data) {
