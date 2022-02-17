@@ -6,3 +6,9 @@
     text-align: center;
     width: 35rem;
 }
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 30rem;
+    }
+}

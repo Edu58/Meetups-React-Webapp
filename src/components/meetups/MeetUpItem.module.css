@@ -12,7 +12,6 @@
 
 .meetupItem img {
     max-width: 25rem;
-    height: auto;
     border-radius: 5px;
     max-height: 20rem;
 }
@@ -24,6 +23,11 @@
     margin-bottom: 1rem;
     margin: 2rem auto;
     max-height: 10rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
+@media screen and (max-width: 1024px) {
+    .meetupItem img {
+        max-width: 20rem;
+    }
+}

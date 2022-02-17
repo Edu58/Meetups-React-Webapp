@@ -15,9 +15,6 @@ function MainNavigation() {
             New Meetup
           </Link>
           <br></br>
-          <Link to={"/favourite"} className={classes.navlink}>
-            Favourite
-          </Link>
         </ul>
       </nav>
     </header>
