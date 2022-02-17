@@ -1,7 +1,6 @@
 import { useRef } from "react/cjs/react.development";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/UI/Button";
-import Card from "../components/UI/Card";
 import classes from "./NewMeetUps.module.css";
 
 function NewMeetUps() {
@@ -37,7 +36,6 @@ function NewMeetUps() {
   }
 
   return (
-    <Card>
       <div className={classes.container}>
         <form className={classes.form} onSubmit={SubmitHandler}>
           <h3 className={classes.title}>Add meetUp</h3>
@@ -61,7 +59,6 @@ function NewMeetUps() {
           <Button>Add New meetUp</Button>
         </form>
       </div>
-    </Card>
   );
 }
 
